@@ -1,0 +1,76 @@
+.mainheder{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.logo{
+    margin-left: 20px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    pointer-events: none;
+    overflow-clip-margin: content-box;
+
+}
+
+.hederleft{
+    margin-left: 20px;
+}
+
+.cafelogo{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.search{
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 150px;
+    display: flex;
+    padding-left: 16px;
+    border-radius: 60px;
+    border-width: 2px;
+    border-color: green;
+    width: 340px;
+    height: 40px;
+    justify-content: space-around;
+}
+
+.cafeCategory{
+    display: block;
+    unicode-bidi: isolate;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 14px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.homebutton{
+    color: #03c75a;
+    cursor: pointer;
+}
+
+.cafehome{
+    font-weight: 700;
+}
+
+.mainpage{
+    display: flex;
+    width: 1280px;
+    margin: auto;
+
+}
+.cafehomepage{
+
+}
+
+.cafeloginpage{
+
+}
