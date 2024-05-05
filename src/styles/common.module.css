@@ -27,7 +27,6 @@
 }
 
 .search{
-    justify-content: center;
     margin-top: 40px;
     margin-left: 150px;
     display: flex;
@@ -41,20 +40,24 @@
 }
 
 .cafeCategory{
+    padding-right: 36px;
     display: block;
     unicode-bidi: isolate;
     -ms-flex-align: center;
     align-items: center;
     margin-top: 14px;
-    padding: 6px 8px;
+
     box-sizing: border-box;
     border-radius: 6px;
     font-size: 16px;
 }
 
 .homebutton{
-    color: #03c75a;
+    display: flex;
+    align-items: center;
+    color: #009f47;
     cursor: pointer;
+    margin-left: 30px;
 }
 
 .cafehome{
@@ -64,13 +67,18 @@
 .mainpage{
     display: flex;
     width: 1280px;
+    height: 3552px;
     margin: auto;
+    justify-content: space-between;
 
 }
 .cafehomepage{
-
 }
 
 .cafeloginpage{
 
+}
+
+.cafeCategoryhr{
+    width: 170px;
 }

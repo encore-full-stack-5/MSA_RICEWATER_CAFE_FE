@@ -25,22 +25,29 @@ export default function Cafemain (){
                 <div className={common.cafeCategory}>
                     <div>
                         <button className={common.homebutton}>
+                            <div>
                             <Image src={homelogo} alt={"homelogo"}/>
+                            </div>
+                            <br/>
+                            <div className={common.boxClick}>
                             <a className={common.cafehome}>카페홈</a>
+                            </div>
                         </button>
+                        <br/>
+                        <hr className={common.cafeCategoryhr}/>
                     </div>
-                    <hr/>
-                    <div className={common.cafehomepage}>
-                        <a>dd</a>
-                    </div>
-
-                    <div className={common.cafeloginpage}>
-                        <a>dd</a>
-                    </div>
-
-
                 </div>
-
+                <hr/>
+                <div>
+                    <div className={common.cafehomepage}>
+                        <a>카페홈</a>
+                    </div>
+                </div>
+                <div>
+                    <div className={common.cafeloginpage}>
+                        <a>로그인페이지</a>
+                     </div>
+                </div>
             </div>
         </>
     )
