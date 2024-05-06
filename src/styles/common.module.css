@@ -3,6 +3,7 @@
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
+    padding-left: 150px;
 
 }
 
@@ -22,6 +23,7 @@
 }
 
 .cafelogo{
+    padding-left: 5px;
     font-size: 32px;
     font-weight: bold;
 }
@@ -40,13 +42,14 @@
 }
 
 .cafeCategory{
+    width: 210px;
+    height: 501px;
     padding-right: 36px;
     display: block;
     unicode-bidi: isolate;
     -ms-flex-align: center;
     align-items: center;
     margin-top: 14px;
-
     box-sizing: border-box;
     border-radius: 6px;
     font-size: 16px;
@@ -54,10 +57,15 @@
 
 .homebutton{
     display: flex;
+    ;
     align-items: center;
+    padding: 6px 8px;
     color: #009f47;
     cursor: pointer;
     margin-left: 30px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .cafehome{
@@ -73,12 +81,202 @@
 
 }
 .cafehomepage{
+    width: 734px;
+    height: 3560px;
+    padding: 30px 46px 80px;
+
 }
 
 .cafeloginpage{
+    width: 336px;
+    height: 1097px;
 
 }
 
 .cafeCategoryhr{
     width: 170px;
+}
+
+.popularPosts{
+    font-weight: bold;
+    padding-right: 8px;
+}
+
+.hometitle{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 2px;
+}
+
+.board_head{
+    display: flex;
+    align-items: center;
+}
+
+.btn_more{
+    margin-left: auto;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+.sub_menu{
+    width: 174px;
+    height: 179px;
+}
+
+.btn_sub{
+    display: block;
+    width: 90px;
+    height: 17px;
+    padding: 7px 0 20px 5px;
+    font-size: 14px;
+    margin-left: 45px;
+}
+
+.login_inner{
+    width: 300px;
+    height: 121px;
+}
+.mycafe_item{
+    width: 640px;
+    height: 167px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    word-wrap: break-word;
+    position: relative;
+    border-bottom: 1px solid silver;
+}
+
+.tophr{
+    width: 1510px;
+}
+
+.mycafe_area{
+    display: flex;
+    width: 640px;
+    height: 48px;
+}
+
+.mycafe_icon{
+    margin-top: 8px;
+    width: 48px;
+    height: 48px;
+}
+.mycafe_info{
+    flex: 1;
+    width: 563px;
+    height: 43px;
+    margin: 5px 0 0 12px;
+    overflow: hidden;
+}
+.mycafe_name{
+    display: flex;
+    font-size: 16px;
+    color: black;
+}
+.mycafe_new{
+    margin-top: 2px;
+    color: gray;
+    font-size: 13px;
+}
+
+.option_button{
+    display: flex;
+}
+
+.btn_bookmark{
+
+}
+
+.mycafe_recent{
+    padding-top: 8px;
+    width: 640px;
+    height: 86px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.recent_list{
+    list-style-position: initial;
+    list-style-image: initial;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+.title{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    unicode-bidi: isolate;
+}
+
+.word{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.name{
+    width: 130px;
+    min-width: 130px;
+    margin-left: 25px;
+    color: gray;
+    font-size: 13px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.date{
+    font-size: 13px;
+    color: gray;
+    white-space: nowrap;
+}
+
+.login_area{
+    margin-top: 20px;
+    padding: 20px 24px 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.login_box{
+
+    -webkit-text-size-adjust: none;
+    font-weight: 400;
+    background-color: #009f47;
+    color: #009f47;
+}
+
+.but_link_login{
+    background-color: #03c75a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 44px;
+    padding: 10px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    letter-spacing: -.56px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.naver{
+    font-size: 16px;
+    border-radius: 6px;
 }
