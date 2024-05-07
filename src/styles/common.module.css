@@ -42,6 +42,7 @@
 }
 
 .cafeCategory{
+    border-right: 1px solid #e5e7eb;
     width: 210px;
     height: 501px;
     padding-right: 36px;
@@ -49,9 +50,9 @@
     unicode-bidi: isolate;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 14px;
+    padding-top: 14px;
     box-sizing: border-box;
-    border-radius: 6px;
+
     font-size: 16px;
 }
 
@@ -81,6 +82,7 @@
 
 }
 .cafehomepage{
+    border-right: 1px solid #e5e7eb;
     width: 734px;
     height: 3560px;
     padding: 30px 46px 80px;
@@ -135,6 +137,7 @@
 }
 
 .login_inner{
+    padding-left: 20px;
     width: 300px;
     height: 121px;
 }
@@ -211,6 +214,7 @@
 }
 
 .title{
+    justify-content: space-between;
     flex: 1;
     display: flex;
     align-items: center;
@@ -280,3 +284,4 @@
     font-size: 16px;
     border-radius: 6px;
 }
+

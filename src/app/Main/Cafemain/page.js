@@ -1,3 +1,4 @@
+"use client"
 import common from '/src/styles/common.module.css'
 import Image from "next/image";
 import naverlogo from '/src/assets/naverlogo.png'
@@ -6,8 +7,11 @@ import homelogo from '/src/assets/homelogo.png'
 import morebutt from '/src/assets/morebutt.png'
 import iconsmp from '/src/assets/iconsmp.png'
 import starbutt from '/src/assets/starbutt.png'
+import onhome from '/src/assets/onhome.png'
+import {useState} from "react";
 
 export default function Cafemain (){
+    const[img, setImg] = useState(false);
     return (
         <>
         <div className={common.mainheder}>
@@ -37,13 +41,14 @@ export default function Cafemain (){
                             </div>
                         </button>
                         <br/>
-                        <button className={common.homebutton}>
-                            <div>
-                                <Image src={homelogo} alt={"homelogo"}/>
+                        <button className={common.homebutton} onClick={() => setImg(!img)}>
+                            <div style={{width: "40px", height: "40px"}}>
+                                <Image style={{width: "100%", height: "100%"}} src={img == false ? homelogo : onhome}
+                                       alt={''}/>
                             </div>
                             <br/>
                             <div className={common.boxClick}>
-                                <a className={common.cafehome}>이웃</a>
+                            <a className={common.cafehome}>이웃</a>
                             </div>
                         </button>
                         <br/>
@@ -117,45 +122,18 @@ export default function Cafemain (){
                                                 <span className={common.word}>
                                                             무선충전 지원하는 보조배터리 NEXT-5007WPB 판매합니다.
                                                 </span>
+                                                <div>
                                                 <span className={common.name}>
                                                     닉네임짓기어려워
                                                 </span>
                                                 <span className={common.date}>
                                                     - 방금 전
                                                 </span>
+                                                </div>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a>
-                                            <div className={common.title}>
-                                                <span className={common.word}>
-                                                    (새제품)7500F 4070 SUPER 게임풀옵 게이밍 데스크탑 PC.
-                                                </span>
-                                                <span className={common.name}>
-                                                    zzzzzz
-                                                </span>
-                                                <span className={common.date}>
-                                                    - 방금 전
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <div className={common.title}>
-                                                <span className={common.word}>
-                                                   실바니안 아기인형 피규어 옷 드레스 소품 이에요 글자수 맞추..
-                                                </span>
-                                                <span className={common.name}>
-                                                    문자주세요오
-                                                </span>
-                                                <span className={common.date}>
-                                                    - 방금 전
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
