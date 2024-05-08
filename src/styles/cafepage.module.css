@@ -1,0 +1,101 @@
+.cafe_body_skin{
+    width: 1080px;
+    height: 2357px;
+    display: block;
+    margin: 0 auto;
+    unicode-bidi: isolate;
+}
+
+.naver_logo{
+
+
+}
+
+.cafe_bener{
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.naver_gnb{
+    width: 1080px;
+    height: 35px;
+    position: relative;
+}
+
+.cafelay{
+    width: 1080px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.cafe_search{
+    margin: -12px 0 8px;
+
+}
+
+.cafe_searchBox{
+
+    display: block;
+    background-color: #fff;
+    width: 232px;
+    height: 35px;
+    padding: 0 6px;
+    border: 1px solid;
+    font-size: 12px;
+    margin-left: auto;
+
+    margin-top: 12px;
+}
+.searchtap{
+    float: right;
+    display: flex;
+}
+
+.searchIcon{
+    margin-top: 12px;
+
+}
+
+.content_area{
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.cafe_info{
+    width: 200px;
+    height: 301px;
+}
+
+.info_action{
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+}
+
+.info_on{
+    flex: 1;
+    font-weight: bold;
+    font-size: 13px;
+    height: 38px;
+    position: relative;
+}
+
+.info_off{
+    flex: 1;
+    font-weight: bold;
+    font-size: 13px;
+    height: 38px;
+    position: relative;
+}
+
+.infobutt{
+    margin-top: 10px;
+}
