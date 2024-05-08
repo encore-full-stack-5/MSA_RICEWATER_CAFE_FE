@@ -87,6 +87,17 @@
     height: 38px;
     position: relative;
 }
+.info_off::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: black;
+    opacity: 0.5;
+}
 
 .info_off{
     flex: 1;
@@ -98,4 +109,94 @@
 
 .infobutt{
     margin-top: 10px;
+}
+
+.cafe_info_data{
+    padding: 15px 10px 12px;
+    border-bottom: 1px solid;
+}
+
+.info_datas{
+    display: flex;
+}
+
+.info_manege{
+    border-color: #e5e5e5;
+    background-color: #ffffff;
+    color: #666;
+    display: inline-block;
+    padding: 1px 2px 1px;
+    border-radius: 4px;
+    border: 1px solid;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 6px;
+
+}
+
+.info_nickname{
+    margin-left: 3px;
+    font-size: 12px;
+}
+
+.info_date{
+    font-size: 12px;
+    line-height: 15px;
+    color: #666;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.cafe_info2{
+    padding: 12px 10px;
+    border-top: 1px solid;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.info2_text{
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.cafe_write{
+    width: 200px;
+    height: 38px;
+}
+
+.cafe_joinbar{
+    width: 165px;
+    display: block;
+    font-weight: bold;
+    line-height: 38px;
+    border-radius: 6px;
+    background-color: #009f47;
+    color: white;
+
+}
+.cafe_category{
+    display: flex;
+    width: 160px;
+    height: 1800px;
+    justify-content: space-between;
+}
+
+.totalvew{
+    float: right;
+    color: #666666;
+    cursor: pointer;
+}
+
+.document{
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.documentset{
+    cursor: pointer;
+    display: flex;
 }
