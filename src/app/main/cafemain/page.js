@@ -9,6 +9,7 @@ import iconsmp from '/src/assets/iconsmp.png'
 import starbutt from '/src/assets/starbutt.png'
 import onhome from '/src/assets/onhome.png'
 import {useState} from "react";
+import Link from "next/link";
 
 export default function Cafemain (){
     const[img, setImg] = useState(false);
@@ -102,12 +103,14 @@ export default function Cafemain (){
                                 <div className={common.mycafe_icon}>
                                     <Image src={iconsmp} alt={iconsmp}/>
                                 </div>
+                                <Link href={'/main/cafepage'}>
                                 <div className={common.mycafe_info}>
                                     <a className={common.mycafe_name}>
                                         <strong>중고나라</strong>
                                     </a>
                                     <a className={common.mycafe_new}>새글 263,431</a>
                                 </div>
+                                </Link>
                                 <div className={common.option_button}>
                                     <button type={"button"} className={common.btn_bookmark}>
                                     <Image src={starbutt} alt={starbutt}></Image>

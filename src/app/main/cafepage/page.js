@@ -8,6 +8,9 @@ import applesvg from '/src/assets/applesvg.svg'
 import map from '/src/assets/map.svg'
 import people from '/src/assets/people.svg'
 import document from '/src/assets/document.svg'
+import fire from '/src/assets/fire.svg'
+import mainbener from '/src/assets/mainbener.jpg'
+import arrow from '/src/assets/arrow.svg'
 
 export default function Cafepage () {
     return(
@@ -34,7 +37,6 @@ export default function Cafepage () {
                     </button>
                 </form>
                 <div className={styles.content_area}>
-                    <div className={styles.group_area}>
                         <div className={styles.cafe_info}>
                             <ul className={styles.info_action}>
                                 <li className={styles.info_on}>
@@ -89,22 +91,90 @@ export default function Cafepage () {
                                         </div>
                                         <br/>
                                         <div className={styles.cafe_category}>
-                                            <div className={styles.documentset}>
-                                                <Image className={styles.document}
-                                                       style={{width: "10px", height: "11px"}} src={document}/>
-                                                <a>전체글보기</a>
-                                            </div>
+                                            <ul className={styles.documentset}>
+                                                <li className={styles.document}>
+                                                    <Image className={styles.documentimg}
+                                                           style={{width: "10px", height: "11px"}} src={document}/>
+                                                    <a>전체글보기</a>
+                                                </li>
+                                            </ul>
                                             <span className={styles.totalvew}>123,523</span>
+                                        </div>
+                                        <div>
+                                            <ul className={styles.documentset}>
+                                                <li className={styles.document}>
+                                                    <Image className={styles.documentimg}
+                                                           style={{width: "10px", height: "11px"}} src={fire}/>
+                                                    <a>인기글보기</a>
+                                                </li>
+                                            </ul>
+                                            <br/>
+                                            <hr className={styles.cafehr}/>
+                                            <br/>
+                                            <div>
+                                                <ul className={styles.documentset}>
+                                                    <li className={styles.document}>
+                                                        <Image className={styles.documentimg}
+                                                               style={{width: "10px", height: "11px"}} src={document}/>
+                                                        <a>자유게시판</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul className={styles.documentset}>
+                                                    <li className={styles.document}>
+                                                        <Image className={styles.documentimg}
+                                                               style={{width: "10px", height: "11px"}} src={document}/>
+                                                        <a>가입인사</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul className={styles.documentset}>
+                                                    <li className={styles.document}>
+                                                        <Image className={styles.documentimg}
+                                                               style={{width: "10px", height: "11px"}} src={document}/>
+                                                        <a>공지사항</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-
-                    </div>
                     <div className={styles.main_area}>
+                        <div className={styles.main_intro}>
+                            <Image className={styles.mainbener} src={mainbener} alt={mainbener}/>
+                        </div>
+                        <div className={styles.layout_box}>
+                            <div className={styles.cb}>
+                                <div className={styles.cb_1}>
+                                    <div className={styles.article_board}>
+                                        <div className={styles.list_tit}>
+                                            <h3>Q & A(질문과 답변)</h3>
+                                            <button>
+                                                <span className={styles.arrowf}>더보기 <Image src={arrow}
+                                                                                           alt={arrow}/></span>
+                                            </button>
+                                        </div>
+                                        <tr className={styles.board_type_main}>
+                                            <td className={styles.td_article}>
+                                                <strong className={styles.board_tag}>
+                                                    공지
+                                                </strong>
+                                                <div className={styles.board_list} style={{width:"100%"}}>
+                                                    <a>중고물품 거래시 필독!!!!</a>
+                                                    <span>[27]</span>
+                                                </div>
+                                                <td className={styles.view}> 1,321</td>
+                                            </td>
 
+                                        </tr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
