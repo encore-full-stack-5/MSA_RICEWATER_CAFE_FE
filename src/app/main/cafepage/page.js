@@ -3,6 +3,7 @@ import Image from "next/image";
 import mainbener from '/src/assets/mainbener.jpg'
 import arrow from '/src/assets/arrow.svg'
 import dot from '/src/assets/dot.svg'
+import Link from "next/link";
 
 export default function Cafepage() {
     return (
@@ -25,6 +26,7 @@ export default function Cafepage() {
                                             </button>
                                         </div>
                                         <div className={styles.board_type_main}>
+                                            <Link href={"/main/boardpage"}>
                                             <div className={styles.td_article}>
                                                 <strong className={styles.board_tag}>
                                                     공지
@@ -35,6 +37,7 @@ export default function Cafepage() {
                                                 </div>
                                                 <div className={styles.view}> 1,321</div>
                                             </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className={styles.article_board}>

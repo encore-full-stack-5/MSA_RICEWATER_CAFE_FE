@@ -1,0 +1,170 @@
+.main_area{
+    width: 860px;
+    height: 1380px;
+}
+
+.sub_title{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    height: 24px;
+}
+
+.pagetitle{
+    font-size: 24px;
+    border-bottom: 1px solid black;
+    padding-bottom: 35px;
+}
+
+.article_board{
+    display: flex;
+}
+
+.tab1{
+    width: 88px;
+    height: 45px;
+}
+
+.tab2{
+    width: 438px;
+    height: 45px;
+}
+
+.tab3{
+    width: 130px;
+    height: 45px;
+}
+
+.tab4{
+    width: 200px;
+    height: 45px;
+}
+
+.board_type_main{
+    width: 100%;
+}
+
+.td_article{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 45px;
+    padding: 4px 7px;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 13px;
+    background-color: #f2f2f2;
+}
+.board_tag{
+    text-align: center;
+    display: block;
+    width: 56px;
+    height: 21px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 19px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 19px;
+    border: 1px solid #ffc6c9;
+    background-color: #ffe3e4;
+    color: #ff4e59;
+}
+
+.board_list{
+    padding-top: 5px;
+    width: 438px;
+    height: 45px;
+    padding-left: 15px;
+    color: red;
+    border-collapse: collapse;
+    display: table-cell;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.board_tags{
+    width: 88px;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.view{
+    width: 130px;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 28px;
+}
+
+.date{
+    width: 200px;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 70px;
+}
+.nomaltext{
+    width: 100%;
+}
+
+.nomal_td_article{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 45px;
+    padding: 4px 7px;
+    font-size: 13px;
+}
+
+.nomal_num{
+    text-align: center;
+    display: block;
+    width: 56px;
+    height: 21px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 19px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 19px;
+}
+.nomal_board_list{
+    padding-top: 5px;
+    width: 438px;
+    height: 45px;
+    padding-left: 15px;
+    border-collapse: collapse;
+    display: table-cell;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.prev_next{
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding-bottom: 10px;
+}
+
+.on{
+    border-color: #e5e5e5;
+    border: solid 1px;
+    background-color: #fff;
+    color: #03c75a;
+    isplay: inline-block;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    line-height: 24px;
+    font-family: arial, sans-serif;
+    margin-bottom: 20px;
+}
