@@ -1,8 +1,6 @@
 .cafe_body_skin{
-    width: 1080px;
     height: 2357px;
     display: block;
-    margin: 0 auto;
     unicode-bidi: isolate;
 }
 
@@ -64,12 +62,12 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 1080px;
-    margin: 0 auto;
+    width: 100%;
     clear: both;
 }
 
 .cafe_info{
+    float: left;
     width: 200px;
     height: 301px;
 }
@@ -218,6 +216,7 @@
 }
 
 .main_area{
+    float: right;
     width: 860px;
 
 }
