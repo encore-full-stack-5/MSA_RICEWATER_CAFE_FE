@@ -21,7 +21,7 @@ export default function Cafemain (){
                 <a className={common.cafelogo}>카페</a>
             </div>
             <div className={common.search}>
-                <input type="text" placeholder="원하는 카페, 글을 찾아보세요" maxLength="255"/>
+                <input style={{width: "80%"}} type="text" placeholder="원하는 카페, 글을 찾아보세요" maxLength="255"/>
                 <button type="submit" aria-label="검색" className="btn_search">
                     <Image src={searchImg} alt={"searchlogo"}/>
                 </button>
@@ -106,7 +106,7 @@ export default function Cafemain (){
                                 <Link href={'/main/cafepage'}>
                                 <div className={common.mycafe_info}>
                                     <a className={common.mycafe_name}>
-                                        <strong>중고나라</strong>
+                                        <h1>중고나라</h1>
                                     </a>
                                     <a className={common.mycafe_new}>새글 263,431</a>
                                 </div>
@@ -120,7 +120,7 @@ export default function Cafemain (){
                             <div className={common.mycafe_recent}>
                                 <ul className={common.recent_list}>
                                     <li className={common.li}>
-                                        <a>
+                                        <div>
                                             <div className={common.title}>
                                                 <span className={common.word}>
                                                             무선충전 지원하는 보조배터리 NEXT-5007WPB 판매합니다.
@@ -134,14 +134,12 @@ export default function Cafemain (){
                                                 </span>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </div>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div>
                     <div className={common.cafeloginpage}>

@@ -6,6 +6,7 @@ import people from "@/assets/people.svg";
 import map from "@/assets/map.svg";
 import document from "@/assets/document.svg";
 import fire from "@/assets/fire.svg";
+import Link from "next/link";
 
 export default function side () {
     return (
@@ -16,7 +17,9 @@ export default function side () {
                         <button className={styles.infobutt}>카페정보</button>
                     </li>
                     <li className={styles.info_off}>
+                        <Link href={'/main/modifyProfile'}>
                         <button className={styles.infobutt}>나의정보</button>
+                        </Link>
                     </li>
                 </ul>
                 <div className={styles.cafe_info_data}>
