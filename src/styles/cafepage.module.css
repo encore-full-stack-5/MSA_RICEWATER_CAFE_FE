@@ -26,6 +26,7 @@
 
 .cafelay{
     width: 1080px;
+    margin: 0 auto;
     display: block;
     unicode-bidi: isolate;
 }
@@ -233,10 +234,19 @@ margin-left: 20px;
 .layout_box{
     width: 100%;
     height: 1060px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .cb{
+    width: 400px;
     display: block;
+}
+
+.cb2{
+    width: 400px;
+    display: block;
+
 }
 
 .cb_1{
@@ -247,7 +257,7 @@ margin-left: 20px;
 
 
 .article_board{
-    width: 430px;
+    width: 400px;
 }
 
 .list_tit{
@@ -262,11 +272,11 @@ margin-left: 20px;
 }
 
 .board_type_main{
-    background: #f9f9f8;
+    background: white;
 }
 
 .td_article{
-    width: 430px;
+    width: 400px;
     display: flex;
     overflow: hidden;
     height: 28px;
@@ -293,6 +303,7 @@ margin-left: 20px;
     color: #ff4e59;
 }
 
+
 .board_list{
     width: 130px;
     padding-left: 15px;
@@ -300,10 +311,27 @@ margin-left: 20px;
     border-collapse: collapse;
     display: table-cell;
     padding-top: 1px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .view{
     width: 30px;
 
     color: #666;
+}
+
+.board_list_nomal{
+    padding-left: 11px;
+}
+
+.aaa{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
