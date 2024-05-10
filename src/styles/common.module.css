@@ -44,7 +44,7 @@
 .cafeCategory{
     border-right: 1px solid #e5e7eb;
     width: 210px;
-    height: 501px;
+    height: 800px;
     padding-right: 36px;
     display: block;
     unicode-bidi: isolate;
@@ -52,7 +52,6 @@
     align-items: center;
     padding-top: 14px;
     box-sizing: border-box;
-
     font-size: 16px;
 }
 
@@ -84,7 +83,7 @@
 .cafehomepage{
     border-right: 1px solid #e5e7eb;
     width: 734px;
-    height: 3560px;
+    height: 800px;
     padding: 30px 46px 80px;
 
 }
@@ -143,7 +142,7 @@
 }
 .mycafe_item{
     width: 640px;
-    height: 167px;
+    height: 500px;
     padding-top: 16px;
     padding-bottom: 16px;
     word-wrap: break-word;

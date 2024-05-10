@@ -19,7 +19,7 @@ export default function Cafepage() {
                                 <div className={styles.cb_1}>
                                     <div className={styles.article_board}>
                                         <div className={styles.list_tit}>
-                                            <h3>Q & A(질문과 답변)</h3>
+                                            <h3>공지사항</h3>
                                             <button>
                                                 <span className={styles.arrowf}>더보기 <Image src={arrow}
                                                                                            alt={arrow}/></span>

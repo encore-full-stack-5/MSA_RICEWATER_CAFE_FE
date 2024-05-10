@@ -161,7 +161,7 @@
 }
 
 .info2_text{
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     display: flex;
     align-items: center;
 }
@@ -179,7 +179,6 @@
     border-radius: 6px;
     background-color: #009f47;
     color: white;
-
 }
 .cafe_category{
     display: flex;

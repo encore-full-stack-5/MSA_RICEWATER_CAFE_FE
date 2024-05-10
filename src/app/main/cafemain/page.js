@@ -10,6 +10,8 @@ import starbutt from '/src/assets/starbutt.png'
 import onhome from '/src/assets/onhome.png'
 import {useState} from "react";
 import Link from "next/link";
+import razers from "/src/assets/cafelogo2.png"
+import jangsa from "/src/assets/logo3.png"
 
 export default function Cafemain (){
     const[img, setImg] = useState(false);
@@ -93,50 +95,133 @@ export default function Cafemain (){
                         <br/>
                         <br/>
                         <div className={common.board_head}>
-                            <h3 className={common.popularPosts}>🔥내가 가입한 카페리스트</h3>
-
+                            <h3 className={common.popularPosts}>🔥&nbsp;내가 가입한 카페리스트</h3>
                             <a className={common.btn_more}>더보기</a>
                             <Image src={morebutt} alt={morebutt}></Image>
                         </div>
-                        <div className={common.mycafe_item}>
-                            <div className={common.mycafe_area}>
-                                <div className={common.mycafe_icon}>
-                                    <Image src={iconsmp} alt={iconsmp}/>
+                        <div>
+                            <div className={common.mycafe_item}>
+                                <div className={common.mycafe_area}>
+                                    <div className={common.mycafe_icon}>
+                                        <Image src={iconsmp} alt={iconsmp}/>
+                                    </div>
+                                    <Link href={'/main/cafepage'}>
+                                        <div className={common.mycafe_info}>
+                                            <a className={common.mycafe_name}>
+                                                <h1>중고나라</h1>
+                                            </a>
+                                            <a className={common.mycafe_new}>새글 263,431</a>
+                                        </div>
+                                    </Link>
+                                    <div className={common.option_button}>
+                                        <button type={"button"} className={common.btn_bookmark}>
+                                            <Image src={starbutt} alt={starbutt}></Image>
+                                        </button>
+                                    </div>
                                 </div>
-                                <Link href={'/main/cafepage'}>
-                                <div className={common.mycafe_info}>
-                                    <a className={common.mycafe_name}>
-                                        <h1>중고나라</h1>
-                                    </a>
-                                    <a className={common.mycafe_new}>새글 263,431</a>
-                                </div>
-                                </Link>
-                                <div className={common.option_button}>
-                                    <button type={"button"} className={common.btn_bookmark}>
-                                    <Image src={starbutt} alt={starbutt}></Image>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className={common.mycafe_recent}>
-                                <ul className={common.recent_list}>
-                                    <li className={common.li}>
-                                        <div>
-                                            <div className={common.title}>
+                                <div className={common.mycafe_recent}>
+                                    <ul className={common.recent_list}>
+                                        <li className={common.li}>
+                                            <div>
+                                                <div className={common.title}>
                                                 <span className={common.word}>
                                                             무선충전 지원하는 보조배터리 NEXT-5007WPB 판매합니다.
                                                 </span>
-                                                <div>
+                                                    <div>
                                                 <span className={common.name}>
                                                     닉네임짓기어려워
                                                 </span>
-                                                <span className={common.date}>
+                                                        <span className={common.date}>
                                                     - 방금 전
                                                 </span>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className={common.mycafe_item}>
+                                    <div className={common.mycafe_area}>
+                                        <div className={common.mycafe_icon}>
+                                            <Image src={razers} alt={razers}/>
                                         </div>
-                                    </li>
-                                </ul>
+                                        <Link href={'/main/cafepage'}>
+                                            <div className={common.mycafe_info}>
+                                                <a className={common.mycafe_name}>
+                                                    <h1>RAZER Offical Cafe</h1>
+                                                </a>
+                                                <a className={common.mycafe_new}>새글 263,431</a>
+                                            </div>
+                                        </Link>
+                                        <div className={common.option_button}>
+                                            <button type={"button"} className={common.btn_bookmark}>
+                                                <Image src={starbutt} alt={starbutt}></Image>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className={common.mycafe_recent}>
+                                        <ul className={common.recent_list}>
+                                            <li className={common.li}>
+                                                <div>
+                                                    <div className={common.title}>
+                                                <span className={common.word}>
+                                                            사용하지 않은 레이저 마우스 싸게 팝니다.
+                                                </span>
+                                                        <div>
+                                                <span className={common.name}>
+                                                    RAZER MASTER
+                                                </span>
+                                                            <span className={common.date}>
+                                                    - 방금 전
+                                                </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className={common.mycafe_item}>
+                                        <div className={common.mycafe_area}>
+                                            <div className={common.mycafe_icon}>
+                                                <Image src={jangsa} alt={jangsa}/>
+                                            </div>
+                                            <Link href={'/main/cafepage'}>
+                                                <div className={common.mycafe_info}>
+                                                    <a className={common.mycafe_name}>
+                                                        <h1>장사의 신 [월 매출 1억 만들기]</h1>
+                                                    </a>
+                                                    <a className={common.mycafe_new}>새글 263,431</a>
+                                                </div>
+                                            </Link>
+                                            <div className={common.option_button}>
+                                                <button type={"button"} className={common.btn_bookmark}>
+                                                    <Image src={starbutt} alt={starbutt}></Image>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className={common.mycafe_recent}>
+                                            <ul className={common.recent_list}>
+                                                <li className={common.li}>
+                                                    <div>
+                                                        <div className={common.title}>
+                                                <span className={common.word}>
+                                                            돈 버는게 어려워? 내가 알려줄게 [3021]
+                                                </span>
+                                                            <div>
+                                                <span className={common.name}>
+                                                    장사의 신
+                                                </span>
+                                                                <span className={common.date}>
+                                                    - 방금 전
+                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,7 +233,7 @@ export default function Cafemain (){
                                 <div className={common.login_box}></div>
                                 <div className={common.but_link_login}>
                                     <h1 className={common.naver}>NAVER</h1>
-                                        <a>&nbsp;&nbsp;로그인</a>
+                                    <a>&nbsp;&nbsp;로그인</a>
                                 </div>
                             </div>
                         </div>

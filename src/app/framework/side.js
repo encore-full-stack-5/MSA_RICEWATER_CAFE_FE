@@ -18,7 +18,7 @@ export default function side () {
                     </li>
                     <li className={styles.info_off}>
                         <Link href={'/main/modifyProfile'}>
-                        <button className={styles.infobutt}>나의정보</button>
+                            <button className={styles.infobutt}>나의정보</button>
                         </Link>
                     </li>
                 </ul>
@@ -61,12 +61,12 @@ export default function side () {
                             </li>
                             <br/>
                             <Link href={'/main/cafejoin'}>
-                            <div className={styles.cafe_write}>
-                                <button>
-                                    <a className={styles.cafe_joinbar}>카페 가입하기</a>
-                                </button>
-                            </div>
-                                </Link>
+                                <div className={styles.cafe_write}>
+                                    <button>
+                                        <a className={styles.cafe_joinbar}>카페 가입하기</a>
+                                    </button>
+                                </div>
+                            </Link>
                             <br/>
                             <div className={styles.cafe_category}>
                                 <ul className={styles.documentset}>
