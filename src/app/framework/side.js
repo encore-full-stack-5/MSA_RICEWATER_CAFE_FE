@@ -60,11 +60,13 @@ export default function side () {
                                 <a>서울특별시 강남구</a>
                             </li>
                             <br/>
+                            <Link href={'/main/cafejoin'}>
                             <div className={styles.cafe_write}>
                                 <button>
                                     <a className={styles.cafe_joinbar}>카페 가입하기</a>
                                 </button>
                             </div>
+                                </Link>
                             <br/>
                             <div className={styles.cafe_category}>
                                 <ul className={styles.documentset}>

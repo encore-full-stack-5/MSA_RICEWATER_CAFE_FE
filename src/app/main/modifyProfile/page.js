@@ -53,10 +53,10 @@ export default function modifyProfile() {
                                                 </label>
                                             </div>
                                             <div className={modify.formInputRadio}>
-                                                <input id="check0-1" type="radio" name="showSexAndAge"
+                                                <input id="check0-2" type="radio" name="showSexAndAge"
                                                        className="input_radio"
                                                        value="false"/>
-                                                <label htmlFor={"check0-1"} className={modify.label}>
+                                                <label htmlFor={"check0-2"} className={modify.label}>
                                                     <span>비허용</span>
                                                 </label>
                                             </div>
