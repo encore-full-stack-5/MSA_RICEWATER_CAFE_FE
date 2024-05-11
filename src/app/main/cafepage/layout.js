@@ -13,9 +13,7 @@ export default function RootLayout({ children }) {
                 margin: "0 auto",
                 unicodeBidi: "isolate"}}>
                 <Side/>
-
                 {children}
-
             </div>
         </>
     );

@@ -11,26 +11,31 @@ import profile from "@/assets/profile.png"
 export default function myinfo(){
     return(
         <>
-            <div className={styles.cafe_info}>
-                <div className={styles.cafe_info_data}>
+            <div className={myinfos.cafe_info}>
+                <div className={myinfos.cafe_info_data}>
                     <table>
-                    <tbody>
-                    <ul className={styles.info_datas}>
-                        <li>
+                      <tbody>
+                        <ul className={styles.info_datas}>
+                            <li>
                             <Image style={{width: "58px", height: "58px"}} src={profile}
                                    alt={profile}/>
-                        </li>
-                        <li style={{marginLeft: "8px"}}>
+                            </li>
+                         <li style={{marginLeft: "8px"}}>
                             <a className={styles.info_nickname}>쌀뜬물</a>
+                            <Link href={'/main/modifyProfile'}>
+                            <button>
+                                <a className={styles.info_manege}>수정</a>
+                            </button>
+                            </Link>
                             <div style={{marginTop: "7px"}} className={styles.info_date}>
                                 <a> 2023.01.16 가입</a>
                             </div>
-                        </li>
+                         </li>
                     </ul>
                     </tbody>
                     </table>
                     <br/>
-                    <div className={styles.cafe_info2}>
+                    <div className={myinfos.cafe_info2}>
                         <ul>
                             <li className={styles.info2_text}>
                                 <Image style={{width: "18px", height: "17px"}} src={applesvg}
@@ -72,16 +77,6 @@ export default function myinfo(){
                                     <a>0회</a>
                                 </div>
                             </li>
-
-                            <br/>
-                            <Link href={'/main/cafejoin'}>
-                                <div className={styles.cafe_write}>
-                                    <button>
-                                        <a className={myinfos.cafe_bar}>카페 글쓰기</a>
-                                    </button>
-                                </div>
-                            </Link>
-                            <br/>
                         </ul>
                     </div>
                 </div>

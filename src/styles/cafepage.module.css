@@ -69,7 +69,7 @@
 .cafe_info{
     float: left;
     width: 200px;
-    height: 301px;
+    height: 230px;
 }
 
 .info_action{
@@ -115,7 +115,6 @@
 
 .cafe_info_data{
     padding: 15px 10px 12px;
-
 }
 
 .info_datas{
@@ -153,6 +152,7 @@
 }
 
 .cafe_info2{
+    width: 161px;
     padding: 12px 10px;
     border-top: 1px solid;
     font-size: 12px;
@@ -161,11 +161,15 @@
 }
 
 .info2_text{
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     display: flex;
     align-items: center;
 }
 
+
+.cafeinfomain{
+    margin: 15px 10px 12px;
+}
 .cafe_write{
     width: 200px;
     height: 38px;

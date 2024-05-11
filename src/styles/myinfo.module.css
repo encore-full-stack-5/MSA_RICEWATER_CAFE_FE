@@ -3,7 +3,7 @@
     cursor: pointer;
 }
 
-.cafe_bar{
+.cafe_bar {
     width: 165px;
     display: block;
     font-weight: bold;
@@ -11,6 +11,26 @@
     border-radius: 6px;
     background-color: #5a5a5a;
     color: white;
+}
+
+.cafe_info{
+    float: left;
+    width: 200px;
+    height: 230px;
+}
+
+
+.cafe_info2{
+    width: 100%;
+    padding: 12px 10px;
+    border-top: 1px solid;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px solid;
+}
+
+.cafe_info_data{
+    padding: 15px 10px 20px;
 }
 
 .text2{
