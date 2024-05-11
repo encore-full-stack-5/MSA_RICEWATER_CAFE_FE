@@ -2,7 +2,8 @@ import modify from "@/styles/modify.module.css"
 import Image from "next/image";
 import profile from "/src/assets/profile.png"
 
-export default function modifyProfile() {
+export default function modifyProfile(props) {
+    const {clickModal} = props
     return (
         <>
             <div className={modify.pop_profile_set}>
@@ -67,12 +68,12 @@ export default function modifyProfile() {
                             </ul>
                             <div className={modify.profile_confirm}>
                                 <a className={modify.button} role={"button"}>
-                                    <span>
+                                    <span onClick={clickModal}>
                                         취소
                                     </span>
                                 </a>
                                 <a className={modify.button2} role={"button"}>
-                                    <span>
+                                    <span onClick={clickModal}>
                                         확인
                                     </span>
                                 </a>

@@ -1,6 +1,11 @@
 .pop_profile_set{
     display: block;
-
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .pop_header{
@@ -18,7 +23,6 @@
 
 .pop_content{
     width: 500px;
-    height: 650px;
     padding: 0 32px;
 }
 

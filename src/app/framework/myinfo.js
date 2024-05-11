@@ -1,14 +1,18 @@
 import styles from "@/styles/cafepage.module.css";
-import Link from "next/link";
 import Image from "next/image";
 import myinfos from "@/styles/myinfo.module.css"
 import applesvg from "@/assets/applesvg.svg";
 import people from "@/assets/people.svg";
 import document from "@/assets/document.svg"
 import profile from "@/assets/profile.png"
+import {useState} from "react";
+import ModifyProfile from "@/app/main/modifyProfile/page";
+import Link from "next/link";
 
 
 export default function myinfo() {
+    const [showModal, setShowModal] = useState(false);
+    const clickModal = () => setShowModal(!showModal);
     return (
         <>
             <div className={myinfos.cafe_info}>
@@ -20,11 +24,10 @@ export default function myinfo() {
                         </li>
                         <li style={{marginLeft: "8px"}}>
                             <a className={styles.info_nickname}>쌀뜬물</a>
-                            <Link href={'/main/modifyProfile'}>
-                                <button>
+                                <button onClick={clickModal}>
                                     <a className={styles.info_manege}>수정</a>
                                 </button>
-                            </Link>
+
                             <div style={{marginTop: "7px"}} className={styles.info_date}>
                                 <a> 2023.01.16 가입</a>
                             </div>
@@ -73,10 +76,22 @@ export default function myinfo() {
                                     <a>0회</a>
                                 </div>
                             </li>
+                            <br/>
+                            <Link href={'/main/board'}>
+                                <div className={styles.cafe_write}>
+                                    <button>
+                                        <a className={myinfos.cafe_bar}>카페 글쓰기</a>
+                                    </button>
+                                </div>
+                            </Link>
+                            <br/>
                         </ul>
                     </div>
                 </div>
             </div>
+            {
+                showModal && <ModifyProfile clickModal={clickModal}/>
+            }
         </>
     )
 }

@@ -12,6 +12,10 @@ import {useState} from "react";
 import Link from "next/link";
 import razers from "/src/assets/cafelogo2.png"
 import jangsa from "/src/assets/logo3.png"
+import save from "/src/assets/save.svg"
+import comment from "/src/assets/comment_heart.svg"
+import hand from "/src/assets/hand.svg"
+import home from "/src/assets/home.svg"
 
 export default function Cafemain (){
     const[img, setImg] = useState(false);
@@ -35,8 +39,8 @@ export default function Cafemain (){
                 <div className={common.cafeCategory}>
                     <div>
                         <button className={common.homebutton}>
-                            <div>
-                                <Image src={homelogo} alt={"homelogo"}/>
+                            <div style={{width: "40px", height: "40px"}}>
+                                <Image src={home} alt={"home"}/>
                             </div>
                             <br/>
                             <div className={common.boxClick}>
@@ -46,7 +50,7 @@ export default function Cafemain (){
                         <br/>
                         <button className={common.homebutton} onClick={() => setImg(!img)}>
                             <div style={{width: "40px", height: "40px"}}>
-                                <Image style={{width: "100%", height: "100%"}} src={img == false ? homelogo : onhome}
+                                <Image style={{width: "100%", height: "100%"}} src={img == false ? hand : onhome}
                                        alt={''}/>
                             </div>
                             <br/>
@@ -56,8 +60,8 @@ export default function Cafemain (){
                         </button>
                         <br/>
                         <button className={common.homebutton}>
-                            <div>
-                                <Image src={homelogo} alt={"homelogo"}/>
+                            <div style={{width: "40px", height: "40px"}}>
+                                <Image style={{width: "40px", height: "40px"}} src={save} alt={"save"}/>
                             </div>
                             <br/>
                             <div className={common.boxClick}>
@@ -66,8 +70,8 @@ export default function Cafemain (){
                         </button>
                         <br/>
                         <button className={common.homebutton}>
-                            <div>
-                                <Image src={homelogo} alt={"homelogo"}/>
+                            <div style={{width: "40px", height: "40px"}}>
+                                <Image src={comment} alt={"comment"}/>
                             </div>
                             <br/>
                             <div className={common.boxClick}>

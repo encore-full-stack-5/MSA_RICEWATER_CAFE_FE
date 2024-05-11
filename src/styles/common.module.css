@@ -57,12 +57,11 @@
 
 .homebutton{
     display: flex;
-    ;
     align-items: center;
     padding: 6px 8px;
     color: #009f47;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 40px;
     box-sizing: border-box;
     border-radius: 6px;
     font-size: 16px;
@@ -70,6 +69,7 @@
 
 .cafehome{
     font-weight: 700;
+    margin-left: 10px;
 }
 
 .mainpage{

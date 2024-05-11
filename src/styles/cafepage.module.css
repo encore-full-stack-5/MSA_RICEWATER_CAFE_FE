@@ -173,10 +173,11 @@
 
 .cafeinfomain{
     margin: 15px 10px 12px;
+    padding-left: 8px;
 }
 .cafe_write{
     width: 200px;
-    height: 38px;
+    height: 60px;
 }
 
 .cafe_joinbar{
@@ -187,6 +188,7 @@
     border-radius: 6px;
     background-color: #009f47;
     color: white;
+    margin-left: 10px;
 }
 .cafe_category{
     display: flex;
