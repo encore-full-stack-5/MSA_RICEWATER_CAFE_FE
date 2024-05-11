@@ -9,52 +9,44 @@ export default function cafeinfo() {
     return (
         <>
             <div className={styles.cafeinfomain}>
-                <table>
-                    <tbody>
-                        <ul className={styles.info_datas}>
-                            <li>
-                                <Image style={{width: "58px", height: "50px"}} src={iconsmp}
-                                 alt={iconsmp}/>
-                             </li>
-                        <li>
-                             <a className={styles.info_nickname}>중고나라마스터</a>
-                             <button>
-                                <a className={styles.info_manege}> 매니저</a>
-                             </button>
-                            <div className={styles.info_date}>
-                                <a> 2014.10.23 개설</a>
-                            </div>
-                            <div className={styles.info_date}>
-                                <a> 카페소개 </a>
-                            </div>
+                <ul className={styles.info_datas}>
+                    <li>
+                        <Image style={{width: "58px", height: "50px"}} src={iconsmp}
+                               alt={iconsmp}/>
+                    </li>
+                    <li>
+                        <a className={styles.info_nickname}>중고나라마스터</a>
+                        <button>
+                            <a className={styles.info_manege}> 매니저</a>
+                        </button>
+                        <div className={styles.info_date}>
+                            <a> 2014.10.23 개설</a>
+                        </div>
+                        <div className={styles.info_date}>
+                            <a> 카페소개 </a>
+                        </div>
+                    </li>
+                </ul>
+                <br/>
+                <ul className={styles.cafe_info2}>
+                    <ul>
+                        <li className={styles.info2_text}>
+                            <Image style={{width: "18px", height: "17px"}} src={applesvg}
+                                   alt={applesvg}/>
+                            <a>열매 4단계</a>
                         </li>
-                        </ul>
-                        <br/>
-                     <table>
-                         <tbody>
-                            <ul className={styles.cafe_info2}>
-                                <ul>
-                                    <li className={styles.info2_text}>
-                                        <Image style={{width: "18px", height: "17px"}} src={applesvg}
-                                        alt={applesvg}/>
-                                        <a>열매 4단계</a>
-                                    </li>
-                                    <li className={styles.info2_text}>
-                                        <Image style={{width: "18px", height: "17px"}} src={people}
-                                        alt={people}/>
-                                         <a>163,432</a>
-                                    </li>
-                                     <li className={styles.info2_text}>
-                                         <Image style={{width: "18px", height: "17px"}} src={map}
-                                            alt={map}/>
-                                        <a>서울특별시 강남구</a>
-                                     </li>
-                                </ul>
-                            </ul>
-                         </tbody>
-                     </table>
-                    </tbody>
-                </table>
+                        <li className={styles.info2_text}>
+                            <Image style={{width: "18px", height: "17px"}} src={people}
+                                   alt={people}/>
+                            <a>163,432</a>
+                        </li>
+                        <li className={styles.info2_text}>
+                            <Image style={{width: "18px", height: "17px"}} src={map}
+                                   alt={map}/>
+                            <a>서울특별시 강남구</a>
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </>
     )

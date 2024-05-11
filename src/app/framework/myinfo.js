@@ -8,32 +8,28 @@ import document from "@/assets/document.svg"
 import profile from "@/assets/profile.png"
 
 
-export default function myinfo(){
-    return(
+export default function myinfo() {
+    return (
         <>
             <div className={myinfos.cafe_info}>
                 <div className={myinfos.cafe_info_data}>
-                    <table>
-                      <tbody>
-                        <ul className={styles.info_datas}>
-                            <li>
+                    <ul className={styles.info_datas}>
+                        <li>
                             <Image style={{width: "58px", height: "58px"}} src={profile}
                                    alt={profile}/>
-                            </li>
-                         <li style={{marginLeft: "8px"}}>
+                        </li>
+                        <li style={{marginLeft: "8px"}}>
                             <a className={styles.info_nickname}>쌀뜬물</a>
                             <Link href={'/main/modifyProfile'}>
-                            <button>
-                                <a className={styles.info_manege}>수정</a>
-                            </button>
+                                <button>
+                                    <a className={styles.info_manege}>수정</a>
+                                </button>
                             </Link>
                             <div style={{marginTop: "7px"}} className={styles.info_date}>
                                 <a> 2023.01.16 가입</a>
                             </div>
-                         </li>
+                        </li>
                     </ul>
-                    </tbody>
-                    </table>
                     <br/>
                     <div className={myinfos.cafe_info2}>
                         <ul>
@@ -51,27 +47,27 @@ export default function myinfo(){
                                 <Image style={{width: "18px", height: "17px"}} src={people}
                                        alt={people}/>
                                 <div>
-                                <a>방문</a>
+                                    <a>방문</a>
                                 </div>
                                 <div className={myinfos.text2}>
-                                <a>2회</a>
+                                    <a>2회</a>
                                 </div>
                             </li>
                             <li className={styles.info2_text}>
                                 <Image style={{width: "18px", height: "17px"}} src={document}
                                        alt={document}/>
                                 <div>
-                                <a>내가 쓴 게시글</a>
+                                    <a>내가 쓴 게시글</a>
                                 </div>
                                 <div className={myinfos.text3}>
-                                <a>0회</a>
+                                    <a>0회</a>
                                 </div>
                             </li>
                             <li className={styles.info2_text}>
                                 <Image style={{width: "18px", height: "17px"}} src={document}
                                        alt={document}/>
                                 <div>
-                                <a>내가 쓴 댓글</a>
+                                    <a>내가 쓴 댓글</a>
                                 </div>
                                 <div className={myinfos.text4}>
                                     <a>0회</a>
