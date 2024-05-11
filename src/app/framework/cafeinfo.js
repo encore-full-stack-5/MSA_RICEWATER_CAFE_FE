@@ -1,5 +1,4 @@
 import styles from "@/styles/cafepage.module.css";
-import Link from "next/link";
 import Image from "next/image";
 import iconsmp from "@/assets/iconsmp.png";
 import applesvg from "@/assets/applesvg.svg";

@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
             <Header/>
             <Serch/>
             <div style={{width: "1080px",
-                height: "2357px",
+                height: "700px",
                 display: "flex",justifyContent: "space-between",
                 margin: "0 auto",
                 unicodeBidi: "isolate"}}>

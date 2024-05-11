@@ -1,5 +1,5 @@
 .cafe_body_skin{
-    height: 2357px;
+    height: 900px;
     display: block;
     unicode-bidi: isolate;
 }
@@ -115,6 +115,8 @@
 
 .cafe_info_data{
     padding: 15px 10px 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .info_datas{
