@@ -23,9 +23,11 @@
 }
 
 .cafelay{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 1080px;
     margin: 0 auto;
-    display: block;
     unicode-bidi: isolate;
 }
 
