@@ -5,7 +5,15 @@ import applesvg from "@/assets/applesvg.svg";
 import people from "@/assets/people.svg";
 import map from "@/assets/map.svg";
 
-export default function cafeinfo() {
+export default function cafeinfo(props) {
+    const {data} = props;
+    const date = new Date(data.createdAt);
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = ('0' + date.getDate()).slice(-2);
+    const dateStr = year + '-' + month + '-' + day;
+    console.log(data);
+
     return (
         <>
             <div className={styles.cafeinfomain}>
@@ -15,12 +23,12 @@ export default function cafeinfo() {
                                alt={iconsmp}/>
                     </li>
                     <li>
-                        <a className={styles.info_nickname}>중고나라마스터</a>
+                        <a className={styles.info_nickname}>{data?.name}</a>
                         <button>
                             <a className={styles.info_manege}> 매니저</a>
                         </button>
                         <div className={styles.info_date}>
-                            <a> 2014.10.23 개설</a>
+                            <a> {dateStr}개설</a>
                         </div>
                         <div className={styles.info_date}>
                             <a> 카페소개 </a>

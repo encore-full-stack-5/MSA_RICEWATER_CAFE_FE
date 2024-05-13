@@ -103,7 +103,7 @@ export default function Cafemain (){
                             <Image src={morebutt} alt={morebutt}></Image>
                         </div>
                         <div>
-                            <div className={common.mycafe_item}>
+                            <div className={common.mycafe_item2}>
                                 <div className={common.mycafe_area}>
                                     <div className={common.mycafe_icon}>
                                         <Image src={iconsmp} alt={iconsmp}/>
@@ -143,7 +143,7 @@ export default function Cafemain (){
                                         </li>
                                     </ul>
                                 </div>
-                                <div className={common.mycafe_item}>
+                                <div className={common.mycafe_item2}>
                                     <div className={common.mycafe_area}>
                                         <div className={common.mycafe_icon}>
                                             <Image src={razers} alt={razers}/>
