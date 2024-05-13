@@ -3,7 +3,6 @@ import common from '/src/styles/common.module.css'
 import Image from "next/image";
 import naverlogo from '/src/assets/naverlogo.png'
 import searchImg from '/src/assets/searchImg.png'
-import homelogo from '/src/assets/homelogo.png'
 import morebutt from '/src/assets/morebutt.png'
 import iconsmp from '/src/assets/iconsmp.png'
 import starbutt from '/src/assets/starbutt.png'
