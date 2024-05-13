@@ -63,11 +63,13 @@ export default function Cafepage() {
                                             <div className={styles.td_article}>
                                                 <Image style={{ width: "18px", height: "17px" }} src={dot}
                                                        alt={dot}/>
+                                                <Link href={"/main/postpage"}>
                                                 <div className={styles.board_list_nomal} style={{ width: "100%" }}>
-                                                    <a>오늘 날씨가 좋아서 쉬고싶은 날이네요 </a>
-                                                    <span>[127]</span>
+                                                    <a> 중고나라 최고의 매물 맥북 에어 m2 16gb 미드나이트 </a>
+                                                    <span>[12]</span>
                                                 </div>
                                                 <div className={styles.view}> 1,321</div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

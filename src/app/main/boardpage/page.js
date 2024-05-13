@@ -1,5 +1,6 @@
 import boardpages from "/src/styles/pageboard.module.css"
 import styles from "@/styles/cafepage.module.css";
+import Link from "next/link";
 
 export default function boardpage (){
     return (
@@ -91,14 +92,16 @@ export default function boardpage (){
                                 1
                             </strong>
                         </div>
+                        <Link href={"/main/postpage"}>
                         <div className={boardpages.nomal_board_list}>
-                            <a>자유롭게 작성하는 게시판입니다</a>
+                            <a>중고나라 최고의 매물 맥북 에어 m2 16gb 미드나이트</a>
                             <span> [11]</span>
-                        </div>
+                        </div></Link>
                         <div className={boardpages.view}> 중고장인</div>
                         <div className={boardpages.date}> 2024.05.07</div>
                     </div>
                 </div>
+
                 <div className={boardpages.nomaltext}>
                     <div className={boardpages.nomal_td_article}>
                         <div className={boardpages.board_tags}>
