@@ -1,10 +1,15 @@
+"use client";
 import postcss from "/src/styles/postpage.module.css"
 import Link from "next/link";
 import obong from "/src/assets/행복한오둥이.png"
 import Image from "next/image";
 import mac from "/src/assets/mac.jpg"
 import profile from "/src/assets/profile.png"
+import {useState} from "react";
+import CommentReply from "@/app/framework/commentReply"
+
 export default function Postpage (){
+    const [comment, setComment] = useState(false);
     return(
         <>
             <div className={postcss.contentBox}>
@@ -48,9 +53,13 @@ export default function Postpage (){
                                 </div>
                                 <div className={postcss.infoBox}>
                                     <a className={postcss.date}>2024.04.13 18:30</a>
-                                    <a role={"button"}>답글쓰기</a>
+                                    <a onClick={() => setComment(!comment)} role={"button"}>답글쓰기</a>
                                 </div>
+                                {
+                                    comment === false ? "" : <CommentReply />
+                                }
                             </div>
+
                         </li>
                         <li className={postcss.CommentItem_reply}>
                             <li className={postcss.CommentItem2}>
@@ -65,12 +74,22 @@ export default function Postpage (){
                                     </div>
                                     <div className={postcss.infoBox}>
                                         <a className={postcss.date}>2024.04.13 18:30</a>
-                                        <a role={"button"}>답글쓰기</a>
+                                        <a onClick={() => setComment(!comment)} role={"button"}>답글쓰기</a>
                                     </div>
                                 </div>
                             </li>
                         </li>
                     </ul>
+                </div>
+                <div className={postcss.commentinput}>
+                    <div className={postcss.my_nickname}>
+                        <a>애플최고</a>
+                        <textarea className={postcss.textinput} style={{width:"767px", height:"40px", marginTop: "10px"}}
+                                  placeholder={"댓글을 남겨보세요"}></textarea>
+                    </div>
+                    <div>
+                        <a className={postcss.inputbut} role={"button"}>등록</a>
+                    </div>
                 </div>
             </div>
         </>

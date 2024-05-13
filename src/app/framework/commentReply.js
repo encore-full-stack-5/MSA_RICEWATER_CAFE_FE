@@ -1,28 +1,19 @@
-import Image from "next/image";
 import postcss from "@/styles/postpage.module.css";
-import profile from "@/assets/profile.png";
 
-export default function commentReply() {
+export default function commentReply(props) {
+    const {comment} = props;
     return (
         <>
-            <ul className={postcss.comment_list}>
-                <li className={postcss.CommentItem}>
-                    <Image style={{width: "36px", height: "36px", marginTop: "14px", marginRight: "10px"}}
-                           src={profile} alt={profile}></Image>
-                    <div className={postcss.comment_box}>
-                        <div className={postcss.nickname_box}>
-                            <a>참치캐니</a>
-                        </div>
-                        <div className={postcss.comment_text_box}>
-                            <p>맥북 얼마에 파시는건가요?</p>
-                        </div>
-                        <div className={postcss.infoBox}>
-                            <a className={postcss.date}>2024.04.13 18:30</a>
-                            <a role={"button"}>답글쓰기</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <div style={{width: "754px", height: "116px"}} className={postcss.commentinput2}>
+                <div className={postcss.my_nickname}>
+                    <a>애플최고</a>
+                    <textarea className={postcss.textinput} style={{width: "700px", height: "30px", marginTop: "10px"}}
+                              placeholder={"댓글을 남겨보세요"}></textarea>
+                </div>
+                <div>
+                    <a className={postcss.inputbut2} role={"button"}>등록</a>
+                </div>
+            </div>
         </>
     )
 }

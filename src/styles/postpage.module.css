@@ -1,6 +1,6 @@
 .contentBox{
     width: 860px;
-    height: 1200px;
+    height: 1250px;
     border: 1px solid #ebecef;
     border-radius: 6px;
 
@@ -108,4 +108,39 @@
     border-top: 1px solid #ebecef;
     display: flex;
     margin-left: 80px;
+}
+.commentinput{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 800px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+.commentinput2{
+    margin-top: 10px;
+    width: 800px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.my_nickname
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.textinput{
+    resize: none;
+}
+.inputbut{
+    color: #666666;
+    margin-right: 30px;
+    float: right;
+}
+.inputbut2{
+    color: #666666;
+    margin-right: 30px;
+    float: right;
 }

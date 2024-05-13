@@ -15,9 +15,7 @@ export default function RootLayout({ children }) {
                 unicodeBidi: "isolate"}}>
                 <Side/>
                 {children}
-                <div>
-                <CommentRe/>
-                </div>
+
             </div>
         </>
     );
