@@ -4,6 +4,8 @@ import iconsmp from "@/assets/iconsmp.png";
 import applesvg from "@/assets/applesvg.svg";
 import people from "@/assets/people.svg";
 import map from "@/assets/map.svg";
+import top from "/src/assets/gear_738853.png"
+import Link from "next/link";
 
 export default function cafeinfo(props) {
     const {data} = props;
@@ -23,10 +25,20 @@ export default function cafeinfo(props) {
                                alt={iconsmp}/>
                     </li>
                     <li>
+                        <div style={{display:"flex", alignItems:"center"}}>
                         <a className={styles.info_nickname}>{data?.name}</a>
                         <button>
                             <a className={styles.info_manege}> 매니저</a>
                         </button>
+                            <Link href={"/main/admin"}>
+                        <div style={{width: "30px", height: "30px"}}>
+                            <button style={{maginBottom: "10px"}}>
+                            <Image src={top} alt={top} style={{width: "20px", height: "20px"}} className={styles.info_manege}/>
+                            </button>
+                        </div>
+                            </Link>
+                        </div>
+
                         <div className={styles.info_date}>
                             <a> {dateStr}개설</a>
                         </div>
@@ -37,7 +49,7 @@ export default function cafeinfo(props) {
                 </ul>
                 <br/>
                 <ul className={styles.cafe_info2}>
-                    <ul>
+                <ul>
                         <li className={styles.info2_text}>
                             <Image style={{width: "18px", height: "17px"}} src={applesvg}
                                    alt={applesvg}/>

@@ -1,3 +1,59 @@
 .section_top{
 
 }
+
+.h_cont{
+    border-bottom: 2px solid black;
+    width: 860px;
+    float: right;
+    font-size: 20px;
+    height: 39px;
+}
+
+.infobox{
+    margin-top: 10px;
+    width: 860px;
+    height: 100px;
+    border-radius: 3px;
+    border: 1px solid #dfe5e9;
+    float: right;
+    background-color: #f4f8f9;
+}
+.fontCol{
+    color: #2e9901;
+}
+
+.list::before {
+    content: "∙";
+}
+.rating{
+    float: right;
+    width: 860px;
+    border-bottom: 1px solid #dfe5e9;
+}
+
+.table{
+    width: 860px;
+}
+.inputbox{
+    margin-left: 30px;
+    color: #666;
+}
+.tbody{
+    border-bottom: 2px solid #dfe5e9;
+}
+.btn_area{
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+}
+.butt{
+    display: inline-block;
+    width: 83px;
+    height: 32px;
+    border-color: #5a5a5a;
+    border-radius: 2px;
+    padding-left: 3px;
+    text-decoration: none !important;
+}
+
