@@ -15,7 +15,7 @@ export default function Postpage (){
 
     const getData = async () => {
         try {
-            const response = await axios.get("/boards/1");
+            const response = await axios.get("/boards");
             setData(response.data);
         } catch (e) {
             console.error(e.response?.data.message);

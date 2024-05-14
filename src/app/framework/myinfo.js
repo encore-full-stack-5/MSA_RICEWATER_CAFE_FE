@@ -8,6 +8,7 @@ import profile from "@/assets/profile.png"
 import {useState} from "react";
 import ModifyProfile from "@/app/main/modifyProfile/page";
 import Link from "next/link";
+import one from "/src/assets/1_120.jpg"
 
 
 export default function myinfo() {
@@ -37,14 +38,17 @@ export default function myinfo() {
                     <div className={myinfos.cafe_info2}>
                         <ul>
                             <li className={styles.info2_text}>
-                                <Image style={{width: "18px", height: "17px"}} src={applesvg}
-                                       alt={applesvg}/>
+                                <Image style={{width: "18px", height: "17px"}} src={one}
+                                       alt={one}/>
                                 <div>
-                                    <a>열매 회원</a>
+                                    <a>성실 맴버</a>
                                 </div>
+                                <Link href={"/main/admin"}>
                                 <div className={myinfos.text}>
                                     <a>등급 안내</a>
                                 </div>
+                                </Link>
+
                             </li>
                             <li className={styles.info2_text}>
                                 <Image style={{width: "18px", height: "17px"}} src={people}

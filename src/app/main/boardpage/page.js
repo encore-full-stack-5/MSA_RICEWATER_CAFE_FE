@@ -29,9 +29,9 @@ export default function boardpage (){
                         공지사항
                     </h1>
                 </div>
+                <table></table>
                 <tr className={boardpages.article_board}>
                     <th className={boardpages.tab1}>
-
                     </th>
                     <th className={boardpages.tab2}>
                         제목
@@ -111,7 +111,7 @@ export default function boardpage (){
                                 {i +1}
                             </strong>
                         </div>
-                        <Link href={"/main/postpage"}>
+                        <Link href={"/main/postpage"} state={{type: 'boardContent'}}>
                         <div className={boardpages.nomal_board_list}>
                             <a>{el?.boardTitle}</a>
                             <span> [11]</span>
@@ -121,6 +121,7 @@ export default function boardpage (){
                     </div>)
                     }
                 </div>
+
 
                 {/*<div className={boardpages.nomaltext}>*/}
                 {/*    <div className={boardpages.nomal_td_article}>*/}

@@ -21,11 +21,13 @@ export default function Cafepage() {
                                 <div className={styles.cb_1}>
                                     <div className={styles.article_board}>
                                         <div className={styles.list_tit}>
+                                            <Link style={{display: "flex", justifyContent: "space-between"}} href={"/main/boardpage"}>
                                             <h3>공지사항</h3>
                                             <button>
-                                                <span className={styles.arrowf}>더보기 <Image src={arrow}
+                                                <span style={{marginLeft: "279px"}} className={styles.arrowf}>더보기 <Image src={arrow}
                                                                                            alt={arrow}/></span>
                                             </button>
+                                            </Link>
                                         </div>
                                         <div className={styles.board_type_main}>
                                             <Link href={"/main/boardpage"}>
@@ -81,11 +83,12 @@ export default function Cafepage() {
                                 <div className={styles.cb_1}>
                                     <div className={styles.article_board}>
                                         <div className={styles.list_tit}>
+                                            <Link style={{display: "flex", justifyContent: "space-between"}} href={"/main/boardpage"}>
                                             <h3>자유게시판</h3>
                                             <button>
-                                                <span className={styles.arrowf}>더보기 <Image src={arrow}
-                                                                                           alt={arrow}/></span>
+                                                <span style={{marginLeft: "265px"}} className={styles.arrowf}>더보기 <Image src={arrow} alt={arrow}/></span>
                                             </button>
+                                            </Link>
                                         </div>
                                         <div className={styles.board_type_main}>
                                             <div className={styles.td_article}>
