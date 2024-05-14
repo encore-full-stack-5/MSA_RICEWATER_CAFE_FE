@@ -5,11 +5,27 @@ import obong from "/src/assets/행복한오둥이.png"
 import Image from "next/image";
 import mac from "/src/assets/mac.jpg"
 import profile from "/src/assets/profile.png"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import CommentReply from "@/app/framework/commentReply"
+import axios from "@/api/axiosInstance";
 
 export default function Postpage (){
     const [comment, setComment] = useState(false);
+    const [data, setData] = useState();
+
+    const getData = async () => {
+        try {
+            const response = await axios.get("/boards/1");
+            setData(response.data);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
+    console.log(data);
     return(
         <>
             <div className={postcss.contentBox}>
@@ -28,12 +44,12 @@ export default function Postpage (){
                         </div>
                         <div className={postcss.profile_info}>
                             <div>오둥이</div>
-                            <div className={postcss.postdate}>2024.05.08 조회 1</div>
+                            <div className={postcss.postdate}>2024.05.08 조회 {data?.boardViews}</div>
                         </div>
                     </div>
                 </div>
                 <div className={postcss.textmain}>
-                    <a>맥북 팔아요 ㅋㅋ</a>
+                    <a>{data?.boardContent}</a>
                     <Image src={mac} alt={mac}></Image>
                 </div>
                 <div className={postcss.CommentBox}>
