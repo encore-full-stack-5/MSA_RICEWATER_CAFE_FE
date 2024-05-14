@@ -1,0 +1,346 @@
+.cafe_body_skin{
+    height: 900px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.naver_logo{
+
+
+}
+
+.cafe_bener{
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.naver_gnb{
+    width: 1080px;
+    height: 35px;
+    position: relative;
+}
+
+.cafelay{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1080px;
+    margin: 0 auto;
+    unicode-bidi: isolate;
+}
+
+.cafe_search{
+    margin: -12px 0 8px;
+
+}
+
+.cafe_searchBox{
+
+    display: block;
+    background-color: #fff;
+    width: 232px;
+    height: 35px;
+    padding: 0 6px;
+    border: 1px solid;
+    font-size: 12px;
+    margin-left: auto;
+
+    margin-top: 12px;
+}
+.searchtap{
+    float: right;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.searchIcon{
+    margin-top: 12px;
+
+}
+
+.content_area{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+.cafe_info{
+    float: left;
+    width: 200px;
+    height: 230px;
+}
+
+.info_action{
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+}
+
+.info_on{
+    flex: 1;
+    font-weight: bold;
+    font-size: 13px;
+    height: 38px;
+    position: relative;
+}
+.info_off::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: black;
+    opacity: 0.5;
+}
+
+.info_off{
+    flex: 1;
+    font-weight: bold;
+    font-size: 13px;
+    height: 38px;
+    position: relative;
+}
+
+.infobutt{
+    margin-top: 10px;
+}
+
+.cafe_info_data{
+    padding: 15px 10px 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_datas{
+    display: flex;
+}
+
+.info_manege{
+    border-color: #e5e5e5;
+    background-color: #ffffff;
+    color: #666;
+    display: inline-block;
+    padding: 1px 2px 1px;
+    border-radius: 4px;
+    border: 1px solid;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 6px;
+
+}
+
+.info_nickname{
+    margin-left: 3px;
+    font-size: 12px;
+}
+
+.info_date{
+    font-size: 12px;
+    line-height: 15px;
+    color: #666;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.cafe_info2{
+    width: 161px;
+    padding: 12px 10px;
+    border-top: 1px solid;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px solid;
+}
+
+.info2_text{
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+
+
+.cafeinfomain{
+    margin: 15px 10px 12px;
+    padding-left: 8px;
+}
+.cafe_write{
+    width: 200px;
+    height: 60px;
+}
+
+.cafe_joinbar{
+    width: 165px;
+    display: block;
+    font-weight: bold;
+    line-height: 38px;
+    border-radius: 6px;
+    background-color: #009f47;
+    color: white;
+    margin-left: 10px;
+}
+.cafe_category{
+    display: flex;
+    width: 160px;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.totalvew{
+    margin-top: 2px;
+    float: right;
+    color: #666666;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.document{
+    display: flex;
+    cursor: pointer;
+}
+
+.documentset{
+    cursor: pointer;
+    display: flex;
+}
+
+.documentimg{
+    margin-top: 7px;
+    margin-right: 2px;
+}
+
+.cafehr{
+    border: 0;
+    height: 2px;
+    background: #ccc;
+}
+
+.main_area{
+    float: right;
+    width: 860px;
+
+}
+.main_intro{
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.mainbener{
+margin-left: 20px;
+}
+
+.layout_box{
+    width: 100%;
+    height: 1060px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cb{
+    width: 400px;
+    display: block;
+}
+
+.cb2{
+    width: 400px;
+    display: block;
+
+}
+
+.cb_1{
+    width: 50%;
+    margin-top: 24px;
+    box-sizing: border-box;
+}
+
+
+.article_board{
+    width: 400px;
+}
+
+.list_tit{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #666;
+}
+
+.arrowf{
+    display: flex;
+}
+
+.board_type_main{
+    background: white;
+}
+
+.td_article{
+    width: 400px;
+    display: flex;
+    overflow: hidden;
+    height: 28px;
+    padding: 4px 7px;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 13px;
+}
+
+.board_tag{
+    text-align: center;
+    display: block;
+    width: 56px;
+    height: 21px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 19px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 19px;
+    border: 1px solid #ffc6c9;
+    background-color: #ffe3e4;
+    color: #ff4e59;
+}
+
+
+.board_list{
+    width: 130px;
+    padding-left: 15px;
+    color: red;
+    border-collapse: collapse;
+    display: table-cell;
+    padding-top: 1px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.view{
+    width: 30px;
+    color: #666;
+}
+
+.board_list_nomal{
+    padding-left: 11px;
+}
+
+.aaa{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

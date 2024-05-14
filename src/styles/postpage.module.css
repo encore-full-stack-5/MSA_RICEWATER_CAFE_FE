@@ -1,0 +1,146 @@
+.contentBox{
+    width: 860px;
+    height: 1250px;
+    border: 1px solid #ebecef;
+    border-radius: 6px;
+
+}
+
+.article_header{
+    width: 800px;
+    margin-top: 30px;
+    margin-left: 20px;
+    height: 125px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #ebecef;
+}
+
+.ArticleTitle{
+
+}
+
+.linkbord{
+    color: #03c75a;
+}
+
+.atc_maintext{
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 26px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.WriterInfo{
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 39px;
+
+}
+
+.writer_icon{
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+
+.profile_info{
+    margin-top: 8px;
+
+}
+
+.postdate{
+    font-size: 10px;
+    color: #666666;
+}
+
+.textmain{
+    margin-top: 8px;
+    margin-left: 30px;
+}
+
+.CommentBox{
+
+}
+
+.commentbar{
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+.comment_list {
+
+}
+
+.CommentItem{
+    display: flex;
+    margin-left: 40px;
+}
+.comment_box{
+    position: relative;
+    padding: 12px 23px 10px 0;
+}
+.CommentItem_reply{
+
+}
+
+.nickname_box{
+
+}
+
+.comment_text_box{
+
+}
+.infoBox{
+    font-size: 13px;
+}
+
+.date{
+    margin-right: 10px;
+}
+
+.CommentItem2{
+    width: 700px;
+    border-top: 1px solid #ebecef;
+    display: flex;
+    margin-left: 80px;
+}
+.commentinput{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 800px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+.commentinput2{
+    margin-top: 10px;
+    width: 800px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.my_nickname
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.textinput{
+    resize: none;
+}
+.inputbut{
+    color: #666666;
+    margin-right: 30px;
+    float: right;
+}
+.inputbut2{
+    color: #666666;
+    margin-right: 30px;
+    float: right;
+}
