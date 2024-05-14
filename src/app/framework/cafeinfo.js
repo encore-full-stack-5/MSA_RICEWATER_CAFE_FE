@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function cafeinfo(props) {
     const {data} = props;
-    const date = new Date(data.createdAt);
+    const date = new Date(data?.createdAt);
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const day = ('0' + date.getDate()).slice(-2);

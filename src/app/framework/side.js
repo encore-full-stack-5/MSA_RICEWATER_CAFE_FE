@@ -5,8 +5,8 @@ import document from "@/assets/document.svg";
 import fire from "@/assets/fire.svg";
 import Link from "next/link";
 import {useEffect, useState} from "react";
-import CafeInfo from "./cafeinfo"
-import MyInfo from "./myinfo"
+import CafeInfo from "/src/app/framework/cafeinfo"
+import MyInfo from "/src/app/framework/myinfo"
 import axios from "/src/api/axiosInstance";
 
 export default function side() {
@@ -37,7 +37,7 @@ export default function side() {
                     </li>
                 </ul>
                 {
-                    myInfo === false && data ? <CafeInfo data={data}/> : <MyInfo></MyInfo>
+                    myInfo === false ? <CafeInfo data={data}/> : <MyInfo></MyInfo>
                 }
                 <div className={styles.cafe_info_data}>
                     <Link href={'/main/cafejoin'}>
