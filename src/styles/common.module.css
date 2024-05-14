@@ -140,6 +140,14 @@
     width: 300px;
     height: 121px;
 }
+.mycafe_item2{
+    width: 640px;
+    height: 500px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    word-wrap: break-word;
+    position: relative;
+}
 .mycafe_item{
     width: 640px;
     height: 500px;

@@ -4,12 +4,27 @@ import Image from "next/image";
 import document from "@/assets/document.svg";
 import fire from "@/assets/fire.svg";
 import Link from "next/link";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import CafeInfo from "./cafeinfo"
 import MyInfo from "./myinfo"
+import axios from "/src/api/axiosInstance";
 
 export default function side() {
     const [myInfo, setMyInfo] = useState(false);
+    const [data, setData] = useState();
+
+    const getData = async () => {
+        try {
+            const response = await axios.get("/cafes/1");
+            setData(response.data);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
     return (
         <>
             <div className={styles.cafe_info}>
@@ -22,7 +37,7 @@ export default function side() {
                     </li>
                 </ul>
                 {
-                    myInfo === false ? <CafeInfo/> : <MyInfo></MyInfo>
+                    myInfo === false && data ? <CafeInfo data={data}/> : <MyInfo></MyInfo>
                 }
                 <div className={styles.cafe_info_data}>
                     <Link href={'/main/cafejoin'}>

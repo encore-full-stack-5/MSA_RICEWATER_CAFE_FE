@@ -1,8 +1,25 @@
+"use client"
 import join from "/src/styles/cafejoin.module.css"
 import modify from "@/styles/modify.module.css";
-import boardpages from "@/styles/pageboard.module.css";
+import {useEffect, useState} from "react";
+import axios from "@/api/axiosInstance";
 
 export default function cafejoin() {
+
+    const [data, setData] = useState();
+
+    const getData = async () => {
+        try {
+            const response = await axios.get("/cafes/1");
+            setData(response.data);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
     return (
         <>
             <div className={join.sub_title}>
@@ -89,7 +106,7 @@ export default function cafejoin() {
                         <div>
                             <div className={join.text_box}>
                                 <a>
-                                    가입시 카페 규정 공지를 꼭 읽어주세요.
+                                    {data?.joinQuestion}
                                 </a>
                                 <textarea className={join.input2} type="text"/>
                             </div>
