@@ -5,6 +5,8 @@ import arrow from '/src/assets/arrow.svg'
 import dot from '/src/assets/dot.svg'
 import Link from "next/link";
 
+
+
 export default function Cafepage() {
     return (
         <>
