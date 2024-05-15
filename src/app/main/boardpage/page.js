@@ -111,7 +111,15 @@ export default function boardpage (){
                                 {i +1}
                             </strong>
                         </div>
-                        <Link href={"/main/postpage"} state={{type: 'boardContent'}}>
+                        <Link
+                            href={{
+                                pathname: `/main/postpage`,
+                                query: {
+                                    id: `${el.id}`
+                                }
+                            }}
+                            // state={{type: 'boardContent'}}
+                        >
                         <div className={boardpages.nomal_board_list}>
                             <a>{el?.boardTitle}</a>
                             <span> [11]</span>
