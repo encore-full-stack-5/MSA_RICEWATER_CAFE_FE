@@ -9,13 +9,20 @@ import {useEffect, useState} from "react";
 import CommentReply from "@/app/framework/commentReply"
 import axios from "@/api/axiosInstance";
 
-export default function Postpage (){
+export default function Postpage (props){
     const [comment, setComment] = useState(false);
     const [data, setData] = useState();
 
+    const date = new Date(data?.createdAt);
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = ('0' + date.getDate()).slice(-2);
+    const dateStr = year + '-' + month + '-' + day;
+
     const getData = async () => {
+        const id = parseInt(props.searchParams.id);
         try {
-            const response = await axios.get("/boards");
+            const response = await axios.get(`/boards/${id}`);
             setData(response.data);
         } catch (e) {
             console.error(e.response?.data.message);
@@ -35,7 +42,7 @@ export default function Postpage (){
                             <div className={postcss.linkbord}>공지사항</div>
                         </Link>
                         <div className={postcss.atc_maintext}>
-                            중고나라 최고의 매물 맥북 에어 m2 16gb 미드나이트
+                            {data?.boardTitle}
                         </div>
                     </div>
                     <div className={postcss.WriterInfo}>
@@ -44,7 +51,7 @@ export default function Postpage (){
                         </div>
                         <div className={postcss.profile_info}>
                             <div>오둥이</div>
-                            <div className={postcss.postdate}>2024.05.08 조회 {data?.boardViews}</div>
+                            <div className={postcss.postdate}>{dateStr} 조회 {data?.boardViews}</div>
                         </div>
                     </div>
                 </div>
