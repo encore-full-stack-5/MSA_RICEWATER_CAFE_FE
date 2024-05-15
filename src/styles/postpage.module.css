@@ -1,6 +1,6 @@
 .contentBox{
     width: 860px;
-    height: 1250px;
+    height: 100%;
     border: 1px solid #ebecef;
     border-radius: 6px;
 
@@ -77,12 +77,13 @@
 }
 
 .CommentItem{
-    display: flex;
     margin-left: 40px;
 }
 .comment_box{
+    display: flex;
     position: relative;
     padding: 12px 23px 10px 0;
+    align-items: center;
 }
 .CommentItem_reply{
 
@@ -106,7 +107,6 @@
 .CommentItem2{
     width: 700px;
     border-top: 1px solid #ebecef;
-    display: flex;
     margin-left: 80px;
 }
 .commentinput{
