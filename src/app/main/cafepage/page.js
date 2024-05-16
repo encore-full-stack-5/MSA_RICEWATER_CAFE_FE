@@ -20,11 +20,22 @@ export default function Cafepage() {
             console.error(e.response?.data.message);
         }
     }
+    const [categorie, setCategorie] = useState([]);
+    const getCategoriesData = async () => {
+        try {
+            const response = await axios.get("/categories");
+            setCategorie(response.data.content);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
 
     useEffect(() => {
         getData();
+        getCategoriesData();
     }, []);
     console.log(data);
+    console.log(categorie);
     return (
         <>
             <div className={styles.cafe_body_skin}>
