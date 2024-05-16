@@ -1,19 +1,27 @@
 'use client'
-import { useSearchParams } from 'next/navigation';
+import {useRouter, useSearchParams} from 'next/navigation';
 import {useEffect} from "react";
 import axios from "/src/api/axiosInstance";
 
-
 export default function login() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const parseLogin = async () => {
-        const response = axios.post("/auth/login", null,
-            { headers: {
-                        'Authorization' : searchParams.get("tokenType") + ' ' + searchParams.get("token")}
-            });
-        console.log(response);
+        const token = searchParams.get("token");
+        const tokenType = searchParams.get("tokenType");
 
-        localStorage.setItem("token", response.data?.token);
+        try {
+            const headers = {
+                "Content-Type": "application/json",
+                "Authorization": `${tokenType} ${token}`
+            }
+            const response = await axios.post("/auth/login", null, { headers: headers });
+            console.log(response);
+            localStorage.setItem("token", response.data?.token);
+            router.push("http://localhost:3000/main/cafemain");
+        } catch (e) {
+            console.log("ERROR:" + e);
+        }
     }
 
     useEffect(() => {

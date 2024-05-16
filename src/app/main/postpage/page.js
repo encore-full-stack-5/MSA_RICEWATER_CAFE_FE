@@ -5,12 +5,52 @@ import obong from "/src/assets/행복한오둥이.png"
 import Image from "next/image";
 import mac from "/src/assets/mac.jpg"
 import profile from "/src/assets/profile.png"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import CommentReply from "@/app/framework/commentReply"
+import axios from "@/api/axiosInstance";
+import Replies from "/src/app/framework/replies"
 
-export default function Postpage (){
+export default function Postpage(props) {
     const [comment, setComment] = useState(false);
-    return(
+    const [boardData, setBoardData] = useState();
+    const [commentData, setCommentData] = useState();
+    const [replies, setReplies] = useState();
+
+    const dateFormat = (el) => {
+        console.log({el});
+        const date = new Date(el);
+        const year = date.getFullYear();
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = ('0' + date.getDate()).slice(-2);
+        const dateStr = year + '-' + month + '-' + day;
+        return dateStr;
+    }
+
+    const id = parseInt(props.searchParams.id);
+    const getBoardsData = async () => {
+        try {
+            const response = await axios.get(`/boards/${id}`);
+            setBoardData(response.data);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
+    const getCommentData = async () => {
+        try {
+            const response = await axios.get(`/comments/board/${id}`);
+            setCommentData(response.data);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
+
+    useEffect(() => {
+        getBoardsData();
+        getCommentData();
+    }, []);
+    console.log(commentData);
+    console.log(boardData);
+    return (
         <>
             <div className={postcss.contentBox}>
                 <div className={postcss.article_header}>
@@ -19,7 +59,7 @@ export default function Postpage (){
                             <div className={postcss.linkbord}>공지사항</div>
                         </Link>
                         <div className={postcss.atc_maintext}>
-                            중고나라 최고의 매물 맥북 에어 m2 16gb 미드나이트
+                            {boardData?.boardTitle}
                         </div>
                     </div>
                     <div className={postcss.WriterInfo}>
@@ -28,12 +68,15 @@ export default function Postpage (){
                         </div>
                         <div className={postcss.profile_info}>
                             <div>오둥이</div>
-                            <div className={postcss.postdate}>2024.05.08 조회 1</div>
+                            <div className={postcss.postdate}>
+                                {boardData&&dateFormat(boardData.createdAt)}
+                                조회 {boardData?.boardViews}
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className={postcss.textmain}>
-                    <a>맥북 팔아요 ㅋㅋ</a>
+                    <a>{boardData?.boardContent}</a>
                     <Image src={mac} alt={mac}></Image>
                 </div>
                 <div className={postcss.CommentBox}>
@@ -41,50 +84,36 @@ export default function Postpage (){
                         <a>댓글</a>
                     </div>
                     <ul className={postcss.comment_list}>
-                        <li className={postcss.CommentItem}>
-                            <Image style={{width: "36px", height: "36px", marginTop: "14px", marginRight: "10px"}}
-                                   src={profile} alt={profile}></Image>
-                            <div className={postcss.comment_box}>
-                                <div className={postcss.nickname_box}>
-                                    <a>참치캐니</a>
-                                </div>
-                                <div className={postcss.comment_text_box}>
-                                    <p>맥북 얼마에 파시는건가요?</p>
-                                </div>
-                                <div className={postcss.infoBox}>
-                                    <a className={postcss.date}>2024.04.13 18:30</a>
-                                    <a onClick={() => setComment(!comment)} role={"button"}>답글쓰기</a>
-                                </div>
-                                {
-                                    comment === false ? "" : <CommentReply />
-                                }
-                            </div>
-
-                        </li>
-                        <li className={postcss.CommentItem_reply}>
-                            <li className={postcss.CommentItem2}>
-                                <Image style={{width: "36px", height: "36px", marginTop: "14px", marginRight: "10px"}}
-                                       src={profile} alt={profile}></Image>
-                                <div className={postcss.comment_box}>
-                                    <div className={postcss.nickname_box}>
-                                        <a>맥북셀러</a>
+                        {
+                            commentData?.map((el, i) =>
+                                <li className={postcss.CommentItem} key={i}>
+                                    <div className={postcss.comment_box}>
+                                        <Image style={{width: "36px", height: "36px", marginRight: "10px"}}
+                                               src={profile} alt={profile}></Image>
+                                        <div className={postcss.nickname_box}>
+                                            {el?.id}
+                                        </div>
                                     </div>
                                     <div className={postcss.comment_text_box}>
-                                        <p>100만원이요 !</p>
+                                        {el?.content}
                                     </div>
                                     <div className={postcss.infoBox}>
-                                        <a className={postcss.date}>2024.04.13 18:30</a>
+                                        <a className={postcss.date}>{el&&dateFormat(el.createdAt)}</a>
                                         <a onClick={() => setComment(!comment)} role={"button"}>답글쓰기</a>
                                     </div>
-                                </div>
-                            </li>
-                        </li>
+                                    {
+                                        comment === false ? "" : <CommentReply/>
+                                    }
+                                </li>)
+                        }
+                        <Replies/>
                     </ul>
                 </div>
                 <div className={postcss.commentinput}>
                     <div className={postcss.my_nickname}>
                         <a>애플최고</a>
-                        <textarea className={postcss.textinput} style={{width:"767px", height:"40px", marginTop: "10px"}}
+                        <textarea className={postcss.textinput}
+                                  style={{width: "767px", height: "40px", marginTop: "10px"}}
                                   placeholder={"댓글을 남겨보세요"}></textarea>
                     </div>
                     <div>

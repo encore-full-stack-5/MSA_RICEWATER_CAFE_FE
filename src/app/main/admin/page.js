@@ -127,12 +127,12 @@ export default function admin() {
                 <div className={admins.btn_area}>
                     <a>
                         <a role="button" className={boards.mainbut}>
-                            <span>취소</span></a>
+                            <span>등록</span></a>
                     </a>
 
                     <a>
                         <a role="button" className={boards.mainbut}>
-                            <span> 등록</span></a>
+                            <span>취소</span></a>
                     </a>
                 </div>
             </div>
