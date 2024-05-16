@@ -1,10 +1,11 @@
 'use client'
-import { useSearchParams } from 'next/navigation';
+import {useRouter, useSearchParams} from 'next/navigation';
 import {useEffect} from "react";
 import axios from "/src/api/axiosInstance";
 
 export default function login() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const parseLogin = async () => {
         const token = searchParams.get("token");
         const tokenType = searchParams.get("tokenType");
@@ -17,6 +18,7 @@ export default function login() {
             const response = await axios.post("/auth/login", null, { headers: headers });
             console.log(response);
             localStorage.setItem("token", response.data?.token);
+            router.push("http://localhost:3000/main/cafemain");
         } catch (e) {
             console.log("ERROR:" + e);
         }

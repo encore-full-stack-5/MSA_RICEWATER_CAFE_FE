@@ -234,10 +234,10 @@ export default function Cafemain (){
                         <div className={common.login_inner}>
                             <div className={common.login_area}>
                                 <div className={common.login_box}></div>
-                                <div className={common.but_link_login}>
+                                <Link href={"http://192.168.0.12:5173/signin?redirect=http://localhost:3000/main/login"} className={common.but_link_login}>
                                     <h1 className={common.naver}>NAVER</h1>
-                                    <a>&nbsp;&nbsp;로그인</a>
-                                </div>
+                                    <p>&nbsp;&nbsp;로그인</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
