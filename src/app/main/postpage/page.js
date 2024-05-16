@@ -16,11 +16,15 @@ export default function Postpage(props) {
     const [commentData, setCommentData] = useState();
     const [replies, setReplies] = useState();
 
-    const date = new Date(boardData?.createdAt);
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = ('0' + date.getDate()).slice(-2);
-    const dateStr = year + '-' + month + '-' + day;
+    const dateFormat = (el) => {
+        console.log({el});
+        const date = new Date(el);
+        const year = date.getFullYear();
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = ('0' + date.getDate()).slice(-2);
+        const dateStr = year + '-' + month + '-' + day;
+        return dateStr;
+    }
 
     const id = parseInt(props.searchParams.id);
     const getBoardsData = async () => {
@@ -64,7 +68,10 @@ export default function Postpage(props) {
                         </div>
                         <div className={postcss.profile_info}>
                             <div>오둥이</div>
-                            <div className={postcss.postdate}>{dateStr} 조회 {boardData?.boardViews}</div>
+                            <div className={postcss.postdate}>
+                                {boardData&&dateFormat(boardData.createdAt)}
+                                조회 {boardData?.boardViews}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,7 +98,7 @@ export default function Postpage(props) {
                                         {el?.content}
                                     </div>
                                     <div className={postcss.infoBox}>
-                                        <a className={postcss.date}>2024.04.13 18:30</a>
+                                        <a className={postcss.date}>{el&&dateFormat(el.createdAt)}</a>
                                         <a onClick={() => setComment(!comment)} role={"button"}>답글쓰기</a>
                                     </div>
                                     {

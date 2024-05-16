@@ -1,13 +1,30 @@
+"use client"
 import styles from '/src/styles/cafepage.module.css'
 import Image from "next/image";
 import mainbener from '/src/assets/mainbener.jpg'
 import arrow from '/src/assets/arrow.svg'
 import dot from '/src/assets/dot.svg'
 import Link from "next/link";
+import axios from "@/api/axiosInstance";
+import {useEffect, useState} from "react";
 
 
 
 export default function Cafepage() {
+    const [data, setData] = useState([]);
+    const getData = async () => {
+        try {
+            const response = await axios.get("/boards");
+            setData(response.data.content);
+        } catch (e) {
+            console.error(e.response?.data.message);
+        }
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
+    console.log(data);
     return (
         <>
             <div className={styles.cafe_body_skin}>
@@ -60,23 +77,29 @@ export default function Cafepage() {
                                             </div>
                                         </div>
                                     </div>
+                                    { data.map ((el, i) =>
                                     <div className={styles.article_board}>
-                                        <div>
-                                        </div>
                                         <div>
                                             <div className={styles.td_article}>
                                                 <Image style={{ width: "18px", height: "17px" }} src={dot}
                                                        alt={dot}/>
-                                                <Link href={"/main/postpage"}>
-                                                <div className={styles.board_list_nomal} style={{ width: "100%" }}>
-                                                    <a> 중고나라 최고의 매물 맥북 에어 m2 16gb 미드나이트 </a>
-                                                    <span>[12]</span>
-                                                </div>
+                                                <Link href={{
+                                                pathname: `/main/postpage`,
+                                                query: {
+                                                id: `${el.id}`
+                                                 }
+                                                }}
+                                                >
+                                                        <div className={styles.board_list_nomal} style={{ width: "100%" }} key={i}>
+                                                        <a>{el.boardTitle}</a>
+                                                            <span>[12]</span>
+                                                        </div>
+
                                                 <div className={styles.view}> 1,321</div>
                                                 </Link>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>)}
                                 </div>
                             </div>
                             <div className={styles.cb2}>
